@@ -20,7 +20,7 @@ function createIntelHexFile(a, d, f)
     h = fopen(f, 'w')
 
     for i=1:size(a)
-        e = sprintf('%s%s%s', s, a(i,:), d(i,:))
+        e = sprintf('%s%s00%s', s, a(i,:), d(i,:))
         c = calcIntelHexChecksum(e);
         fprintf(h,':%s%s\n',e,c);
     end
